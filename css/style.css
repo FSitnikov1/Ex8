@@ -1,0 +1,29 @@
+label, footer {
+    font-family: sans-serif;
+}
+
+label {
+    font-size: 1rem;
+    padding-right: 10px;
+}
+
+select {
+    font-size: .9rem;
+    padding: 2px 5px;
+}
+
+#form_name{
+    border: 2px solid rgba(52, 48, 48, 0.39);
+    border-radius: 8px;
+}
+#form_email{
+    border: 2px solid rgba(52, 48, 48, 0.39);
+    border-radius: 8px;
+}#form_biography{
+     border: 2px solid rgba(52, 48, 48, 0.39);
+     border-radius: 8px;
+ }
+#form_confirm{
+    border: 2px solid rgba(52, 48, 48, 0.39);
+    border-radius: 8px;
+}
