@@ -1,10 +1,22 @@
-label, footer {
-    font-family: sans-serif;
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-label {
-    font-size: 1rem;
-    padding-right: 10px;
+#btn_call {
+    max-width: auto;
+    margin: 20% auto;
+    padding: auto;
+    border: 2px solid rgba(52, 48, 48, 0.39);
+    border-radius: 8px;
+}
+
+#btn_uncall {
+    max-width: auto;
+    margin: 15px auto;
+    border: 2px solid rgba(52, 48, 48, 0.39);
+    border-radius: 8px;
 }
 
 select {
@@ -12,18 +24,71 @@ select {
     padding: 2px 5px;
 }
 
-#form_name{
+#form_name {
     border: 2px solid rgba(52, 48, 48, 0.39);
     border-radius: 8px;
 }
-#form_email{
+
+#form_email {
     border: 2px solid rgba(52, 48, 48, 0.39);
     border-radius: 8px;
-}#form_biography{
-     border: 2px solid rgba(52, 48, 48, 0.39);
-     border-radius: 8px;
- }
-#form_confirm{
+}
+
+#form_biography {
     border: 2px solid rgba(52, 48, 48, 0.39);
     border-radius: 8px;
+}
+
+#form_confirm {
+    border: 2px solid rgba(52, 48, 48, 0.39);
+    border-radius: 8px;
+}
+
+#formula_popup {
+    width: 100%;
+    min-height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+}
+
+#pop {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #c5c5c5;
+    margin: 20% auto;
+    padding: 20px;
+    max-width: 300px;
+    border-radius: 20px;
+}
+
+#form {
+    margin: auto;
+    width: auto;
+    height: auto;
+    border: 2px solid rgba(75, 69, 69, 0.39);
+    border-radius: 8px;
+}
+
+#forma label {
+    margin: 2px;
+    padding: 2px;
+}
+
+#forma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media only screen and (max-width: 480px) {
+    #pop {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    #formula_popup {
+        background-color: #c5c5c5;
+    }
 }
