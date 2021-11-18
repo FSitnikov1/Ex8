@@ -15,28 +15,31 @@
 <body>
 	<div class="main">
 		<div class="call">
-			<button class="btn_show" type="submit" id="btn_call">Показать форму</button>
+			<a href="#popup" class="btn_show" id="btn_call">Показать форму</a>
 		</div>
-		<div class="form_popup">
+		<div id="popup" class="form_popup">
 			<div class="pop">
-				<form id="forma" action="#" class="">
-					<button class="btn_hide" id="btn_uncall">X</button>
+				<form id="forma" action="https://formcarry.com/s/2fRNBeXOmlm" accept-charset="UTF-8" class="form">
+					<a href="#" class="btn_hide" id="btn_uncall">X</a>
 					<h1>Форма</h1>
 					<div class="form_item">
 						<label for="formName" class="form_label">Имя*:</label>
-						<input id="formName" type="text" placeholder="username" name="username">
+						<input id="formName" class="form_input req name" type="text" placeholder="username"
+							name="username">
 					</div>
 					<div class="form_item">
 						<label for="formEmail" class="form_label">E-mail*:</label>
-						<input id="formEmail" type="email" placeholder="e-mail" name="e-mail">
+						<input id="formEmail" class="form_input req email" type="email" placeholder="e-mail"
+							name="e-mail">
 					</div>
 					<div class="form_item">
 						<label for="formBio" class="form_label">Биография*:</label>
-						<textarea id="formBio" placeholder="biography"></textarea>
+						<textarea id="formBio" placeholder="biography" name="bio"></textarea>
 					</div>
 					<div class="form_item">
 						<div class="checkbox">
-							<input id="formAgreement" type="checkbox" checked name="agreement" class="checkbox_input">
+							<input id="formAgreement" type="checkbox" checked name="agreement"
+								class="checkbox_input req">
 							<label for="formAgreement" class="form_label">
 								<span>с контрактом ознакомлен(а)</span>
 							</label>
@@ -51,6 +54,8 @@
 	</div>
 	<!-- Подключаем jQuery -->
 	<script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Ajax -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 	<!-- Подключаем скрипты -->
 	<script src="js/main.js"></script>
 </body>

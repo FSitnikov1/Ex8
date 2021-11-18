@@ -9,13 +9,16 @@
   align-items: center;
 }
 
-.call #btn_call {
+.call .btn_show {
   margin: 10px;
   padding: 10px;
+  background-color: rgba(128, 128, 128, 0.219);
   border: 2px solid rgba(52, 48, 48, 0.39);
+  color: black;
   border-radius: 20px;
   font-size: 20px;
   font-weight: 500;
+  text-decoration: none;
 }
 
 .form_popup {
@@ -27,9 +30,24 @@
   top: 0px;
 }
 
+#popup {
+  display: none;
+}
+#popup:target {
+  display: block;
+}
+
+.form_input.error {
+  box-shadow: 0 0 15px red;
+}
+
+.checkbox_input.error {
+  box-shadow: 0 0 15px red;
+}
+
 .pop {
   background-color: #a0a0a093;
-  margin: 200px auto;
+  margin: 100px auto;
   padding: 20px;
   max-width: 500px;
   min-height: 400px;
@@ -37,12 +55,13 @@
 }
 .pop .btn_hide {
   float: right;
-  margin: 2px;
-  padding: 8px;
-  background-color: rgba(185, 29, 29, 0.411);
-  border: 2px solid rgba(0, 0, 0, 0.568);
-  border-radius: 20px;
+  margin: 4px;
+  padding: auto;
+  color: rgba(255, 0, 0, 0.473);
+  font-size: 30px;
+  font-weight: 400;
   cursor: pointer;
+  text-decoration: none;
 }
 .pop h1 {
   text-align: center;
@@ -81,6 +100,7 @@ textarea {
 
 .pop textarea {
   min-height: 100px;
+  max-height: 300px;
   resize: vertical;
 }
 .pop #formAgreement {
@@ -90,7 +110,8 @@ textarea {
 .checkbox {
   display: flex;
   flex-direction: row;
-  padding: 0px 20px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .form_button {
