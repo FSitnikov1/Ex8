@@ -1,4 +1,4 @@
-window.addEventListener('DOMContentLoaded', function(event) {
+window.addEventListener('DOMContentLoaded', function (event) {
     console.log("DOM fully loaded and parsed");
     document.getElementById("btn_call").addEventListener("click", PopUpShow);
     document.getElementById("btn_uncall").addEventListener("click", PopUpHide);
@@ -6,13 +6,13 @@ window.addEventListener('DOMContentLoaded', function(event) {
 });
 
 //Скрыть PopUp при загрузке страницы  
-//window.onload = PopUpHide;
+window.onload = PopUpHide;
 
 //Функция отображения PopUp
 function PopUpShow() {
-    $("#formula_popup").show();
+    $(".form_popup").show();
 }
 //Функция скрытия PopUp
 function PopUpHide() {
-    $("#formula_popup").hide();
+    $(".form_popup").hide();
 }

@@ -2,50 +2,55 @@
 <html lang="Ru">
 
 <head>
-    <!-- Кодировка веб-страницы -->
-    <meta charset="UTF-8">
-    <!-- Настройка viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Подключение css файла -->
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Название веб-страницы во вкладках -->
-    <title>Задание №8</title>
+	<!-- Кодировка веб-страницы -->
+	<meta charset="UTF-8">
+	<!-- Настройка viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Подключение css файла -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Название веб-страницы во вкладках -->
+	<title>Задание №8</title>
 </head>
 
 <body>
-    <div id="main">
-        <div id="call">
-            <button id="btn_call">Показать форму</button>
-        </div>
-        <div id="formula_popup">
-            <div id="pop">
-                <h4 id="form">Форма</h4>
-                <form id="forma">
-                    <label>
-                        Имя: <br>
-                        <input id="form_name" type="text" placeholder=" name" name="username" value="">
-                    </label>
-                    <label>
-                         E-mail:<br>
-                        <input id="form_email" type="email" placeholder=" e-mail" name="email" value="">
-                    </label>
-                    <label>
-                        Биография: <br>
-                        <textarea id="form_biography" placeholder="biography" autofocus></textarea>
-                    </label>
-                    <label>
-                        <input id="form_conf" type="checkbox"> с контрактом ознакомлен(а) <br>
-                    </label>
-                    <label>
-                        <button id="form_confirm">«Отправить»</button>
-                    </label>
-                </form>
-                <button id="btn_uncall">Убрать форму</button>
-            </div>
-        </div>
-    </div>
-    <!-- Подключаем jQuery -->
-    <script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <!-- Подключаем скрипты -->
-    <script src="js/main.js"></script>
+	<div class="main">
+		<div class="call">
+			<button class="btn_show" type="submit" id="btn_call">Показать форму</button>
+		</div>
+		<div class="form_popup">
+			<div class="pop">
+				<form id="forma" action="#" class="">
+					<button class="btn_hide" id="btn_uncall">X</button>
+					<h1>Форма</h1>
+					<div class="form_item">
+						<label for="formName" class="form_label">Имя*:</label>
+						<input id="formName" type="text" placeholder="username" name="username">
+					</div>
+					<div class="form_item">
+						<label for="formEmail" class="form_label">E-mail*:</label>
+						<input id="formEmail" type="email" placeholder="e-mail" name="e-mail">
+					</div>
+					<div class="form_item">
+						<label for="formBio" class="form_label">Биография*:</label>
+						<textarea id="formBio" placeholder="biography"></textarea>
+					</div>
+					<div class="form_item">
+						<div class="checkbox">
+							<input id="formAgreement" type="checkbox" checked name="agreement" class="checkbox_input">
+							<label for="formAgreement" class="form_label">
+								<span>с контрактом ознакомлен(а)</span>
+							</label>
+						</div>
+					</div>
+					<div class="form_item">
+						<button class="form_button" type="submit" id="formConfirm">«Отправить»</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- Подключаем jQuery -->
+	<script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<!-- Подключаем скрипты -->
+	<script src="js/main.js"></script>
 </body>
