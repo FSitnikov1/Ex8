@@ -11,19 +11,25 @@ document.addEventListener('DOMContentLoaded', function () {
         let formData = new FormData(form);
 
         if (error === 0) {
-            form.classList.add('sending');
-            let response = await fetch('sendmail.php', {
-                method: 'POST',
-                body: formData
+            $("#forma").submit(function (e) {
+                e.preventDefault();
+                var href = $(this).attr("action");
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: href,
+                    data: $(this).serialize(),
+                    success: function (response) {
+                        if (response.status == "success") {
+                            form.reset();
+                            alert("We received your submission, thank you!");
+
+                        } else {
+                            alert("An error occured: " + response.message);
+                        }
+                    }
+                });
             });
-            if (response.ok) {
-                let result = await response.json();
-                alert(result.message);
-                formPreview.innerHTML = '';
-                form.reset();
-            } else {
-                alert("Ошибка");
-            }
         } else {
             alert('Fill the fields!');
         }
